@@ -1,0 +1,51 @@
+{
+   "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:jsx-a11y/recommended",
+      "prettier"
+   ],
+   "plugins": ["react", "react-hooks", "import", "jsx-a11y", "prettier"],
+   "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module",
+      "ecmaFeatures": {
+         "jsx": true
+      }
+   },
+   "env": {
+      "browser": true,
+      "amd": true,
+      "node": true
+   },
+   "rules": {
+      "prettier/prettier": [
+         "error",
+         {
+            "endOfLine": "auto"
+         }
+      ],
+
+      "no-unused-vars": "error"
+   },
+   "settings": {
+      "react": {
+         "version": "detect"
+      },
+      "import/resolver": {
+         "node": {
+            "extensions": [".js", ".jsx"]
+         }
+      },
+      "import/core-modules": ["swiper"],
+      "import/resolver": {
+         "node": {
+            "extensions": [".js", ".jsx"],
+            "moduleDirectory": ["node_modules", "./src"]
+         }
+      }
+   }
+}
